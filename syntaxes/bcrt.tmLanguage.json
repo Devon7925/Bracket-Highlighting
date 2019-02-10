@@ -22,7 +22,7 @@
 		"variable": {
 			"name": "variable.bcrt",
 			"begin": "'",
-			"end": "`",
+			"end": "'",
 			"patterns": [
 			]
 		},
