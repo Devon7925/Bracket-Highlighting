@@ -12,6 +12,20 @@
 			}
 		},{
 			"scope": [
+				"comment.bcrt"
+			],
+			"settings": {
+				"foreground": "#505050"
+			}
+		},{
+			"scope": [
+				"this.char.bcrt"
+			],
+			"settings": {
+				"foreground": "#CC00CC"
+			}
+		},{
+			"scope": [
 				"assign.char.bcrt"
 			],
 			"settings": {

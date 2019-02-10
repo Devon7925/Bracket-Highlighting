@@ -5,11 +5,15 @@
 		{
 			"include": "#keywords"
 		},{
+			"include": "#comments"
+		},{
 			"include": "#strings"
 		},{
 			"include": "#variable"
 		},{
 			"include": "#assign"
+		},{
+			"include": "#this"
 		},{
 			"include": "#end"
 		}
@@ -22,12 +26,28 @@
 			"patterns": [
 			]
 		},
+		"comments": {
+			"name": "comment.bcrt",
+			"begin": "\\\\",
+			"end": "\\\\",
+			"patterns": [
+			]
+		},
 		"assign": {
 			"name": "equals.bcrt",
 			"patterns": [
 				{
 					"name": "assign.char.bcrt",
 					"match": "@"
+				}
+			]
+		},
+		"this": {
+			"name": "self.bcrt",
+			"patterns": [
+				{
+					"name": "this.char.bcrt",
+					"match": ":"
 				}
 			]
 		},
