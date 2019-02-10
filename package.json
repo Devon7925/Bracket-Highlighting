@@ -1,0 +1,32 @@
+{
+    "name": "bracket",
+    "displayName": "Bracket Support",
+    "description": "Adds support for the Bracket programming language.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.29.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "bcrt",
+            "aliases": ["Bracket", "bcrt"],
+            "extensions": [".bcrt"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "bcrt",
+            "scopeName": "text.bcrt",
+            "path": "./syntaxes/bcrt.tmLanguage.json"
+        }],
+        "themes": [
+            {
+                "label": "Blackest Black",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Bracket-color-theme.json"
+            }
+        ]
+    }
+}

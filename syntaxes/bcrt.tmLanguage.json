@@ -1,0 +1,45 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Bracket",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},{
+			"include": "#strings"
+		},{
+			"include": "#variable"
+		},{
+			"include": "#assign"
+		},{
+			"include": "#end"
+		}
+	],
+	"repository": {
+		"variable": {
+			"name": "variable.bcrt",
+			"begin": "'",
+			"end": "`",
+			"patterns": [
+			]
+		},
+		"assign": {
+			"name": "equals.bcrt",
+			"patterns": [
+				{
+					"name": "assign.char.bcrt",
+					"match": "@"
+				}
+			]
+		},
+		"end": {
+			"name": "end.bcrt",
+			"patterns": [
+				{
+					"name": "end.char.bcrt",
+					"match": ";"
+				}
+			]
+		}
+	},
+	"scopeName": "text.bcrt"
+}
