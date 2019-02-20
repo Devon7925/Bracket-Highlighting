@@ -19,14 +19,14 @@
 			}
 		},{
 			"scope": [
-				"this.char.bcrt"
+				"self.bcrt"
 			],
 			"settings": {
 				"foreground": "#CC00CC"
 			}
 		},{
 			"scope": [
-				"assign.char.bcrt"
+				"assign.bcrt"
 			],
 			"settings": {
 				"fontStyle": "bold",
@@ -34,11 +34,19 @@
 			}
 		},{
 			"scope": [
-				"end.char.bcrt"
+				"end.bcrt"
 			],
 			"settings": {
 				"fontStyle": "bold",
 				"foreground": "#FFAA22"
+			}
+		},{
+			"scope": [
+				"number.bcrt"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#8888FF"
 			}
 		},{
 

@@ -3,17 +3,13 @@
 	"name": "Bracket",
 	"patterns": [
 		{
-			"include": "#keywords"
-		},{
 			"include": "#comments"
-		},{
-			"include": "#strings"
 		},{
 			"include": "#variable"
 		},{
-			"include": "#assign"
+			"include": "#value"
 		},{
-			"include": "#this"
+			"include": "#assign"
 		},{
 			"include": "#end"
 		}
@@ -26,39 +22,49 @@
 			"patterns": [
 			]
 		},
+		"value": {
+			"name": "value.bcrt",
+			"begin": "{",
+			"end": "}",
+			"patterns": [
+				{
+					"include": "#value"
+				},{
+					"include": "#variable"
+				},{
+					"include": "#assign"
+				},{
+					"include": "#this"
+				},{
+					"include": "#number"
+				}
+			]
+		},
+		"number": {
+			"name": "number.bcrt",
+			"patterns": [],
+			"match": "\\d+"
+		},
 		"comments": {
 			"name": "comment.bcrt",
 			"begin": "\\\\",
 			"end": "\\\\",
-			"patterns": [
-			]
+			"patterns": []
 		},
 		"assign": {
-			"name": "equals.bcrt",
-			"patterns": [
-				{
-					"name": "assign.char.bcrt",
-					"match": "@"
-				}
-			]
+			"name": "assign.bcrt",
+			"patterns": [],
+			"match": "@"
 		},
 		"this": {
 			"name": "self.bcrt",
-			"patterns": [
-				{
-					"name": "this.char.bcrt",
-					"match": ":"
-				}
-			]
+			"patterns": [],
+			"match": ":"
 		},
 		"end": {
 			"name": "end.bcrt",
-			"patterns": [
-				{
-					"name": "end.char.bcrt",
-					"match": ";"
-				}
-			]
+			"patterns": [],
+			"match": ";"
 		}
 	},
 	"scopeName": "text.bcrt"
