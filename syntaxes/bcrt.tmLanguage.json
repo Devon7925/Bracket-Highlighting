@@ -12,18 +12,20 @@
 			"include": "#assign"
 		},{
 			"include": "#end"
+		},{
+			"include": "#index"
 		}
 	],
 	"repository": {
 		"variable": {
-			"name": "variable.bcrt",
+			"name": "variable.name.bcrt",
 			"begin": "'",
 			"end": "'",
 			"patterns": [
 			]
 		},
 		"value": {
-			"name": "value.bcrt",
+			"name": "constant.other.value.bcrt",
 			"begin": "{",
 			"end": "}",
 			"patterns": [
@@ -37,32 +39,50 @@
 					"include": "#this"
 				},{
 					"include": "#number"
+				},{
+					"include": "#index"
+				}
+			]
+		},
+		"index": {
+			"name": "constant.other.index.bcrt",
+			"begin": "\\[",
+			"end": "\\]",
+			"patterns": [
+				{
+					"include": "#value"
+				},{
+					"include": "#variable"
+				},{
+					"include": "#this"
+				},{
+					"include": "#number"
 				}
 			]
 		},
 		"number": {
-			"name": "number.bcrt",
+			"name": "constant.numeric.bcrt",
 			"patterns": [],
 			"match": "\\d+"
 		},
 		"comments": {
-			"name": "comment.bcrt",
+			"name": "comment.block.bcrt",
 			"begin": "\\\\",
 			"end": "\\\\",
 			"patterns": []
 		},
 		"assign": {
-			"name": "assign.bcrt",
+			"name": "storage.modifier.bcrt",
 			"patterns": [],
 			"match": "@"
 		},
 		"this": {
-			"name": "self.bcrt",
+			"name": "variable.name.bcrt",
 			"patterns": [],
 			"match": ":"
 		},
 		"end": {
-			"name": "end.bcrt",
+			"name": "punctuation.terminator.bcrt",
 			"patterns": [],
 			"match": ";"
 		}
