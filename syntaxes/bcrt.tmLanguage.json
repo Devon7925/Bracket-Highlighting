@@ -7,7 +7,11 @@
 		},{
 			"include": "#variable"
 		},{
+			"include": "#operator"
+		},{
 			"include": "#value"
+		},{
+			"include": "#subelem"
 		},{
 			"include": "#assign"
 		},{
@@ -32,13 +36,47 @@
 				{
 					"include": "#value"
 				},{
+					"include": "#subelem"
+				},{
+					"include": "#listspliter"
+				},{
+					"include": "#return"
+				},{
 					"include": "#variable"
+				},{
+					"include": "#operator"
 				},{
 					"include": "#assign"
 				},{
 					"include": "#this"
 				},{
+					"include": "#group"
+				},{
 					"include": "#number"
+				},{
+					"include": "#string"
+				},{
+					"include": "#index"
+				}
+			]
+		},
+		"group": {
+			"name": "constant.other.group.bcrt",
+			"begin": "\\(",
+			"end": "\\)",
+			"patterns": [
+				{
+					"include": "#value"
+				},{
+					"include": "#subelem"
+				},{
+					"include": "#variable"
+				},{
+					"include": "#operator"
+				},{
+					"include": "#this"
+				},{
+					"include": "#group"
 				},{
 					"include": "#index"
 				}
@@ -52,9 +90,15 @@
 				{
 					"include": "#value"
 				},{
+					"include": "#subelem"
+				},{
 					"include": "#variable"
 				},{
+					"include": "#operator"
+				},{
 					"include": "#this"
+				},{
+					"include": "#group"
 				},{
 					"include": "#number"
 				}
@@ -64,6 +108,31 @@
 			"name": "constant.numeric.bcrt",
 			"patterns": [],
 			"match": "\\d+"
+		},
+		"subelem": {
+			"name": "punctuation.separator.period.bcrt",
+			"patterns": [],
+			"match": "(?<=[}\\]):'])\\."
+		},
+		"operator": {
+			"name": "keyword.operator.bcrt",
+			"patterns": [],
+			"match": "(?<=[}\\]):'])[^{\\[():'@\\n]*[^{\\[():'.@\\n][^{\\[(:'@\\n]*(?=[{\\[(:'])"
+		},
+		"listspliter": {
+			"name": "punctuation.separator.delimiter.bcrt",
+			"patterns": [],
+			"match": ","
+		},
+		"return": {
+			"name": "keyword.control.bcrt",
+			"patterns": [],
+			"match": "~"
+		},
+		"string": {
+			"name": "string.quoted.bcrt",
+			"patterns": [],
+			"match": "[a-zA-Z]+"
 		},
 		"comments": {
 			"name": "comment.block.bcrt",
@@ -77,7 +146,7 @@
 			"match": "@"
 		},
 		"this": {
-			"name": "variable.name.bcrt",
+			"name": "variable.name.this.bcrt",
 			"patterns": [],
 			"match": ":"
 		},
