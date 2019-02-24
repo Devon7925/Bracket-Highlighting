@@ -20,13 +20,6 @@
             "language": "bcrt",
             "scopeName": "text.bcrt",
             "path": "./syntaxes/bcrt.tmLanguage.json"
-        }],
-        "themes": [
-            {
-                "label": "Blackest Black",
-                "uiTheme": "vs-dark",
-                "path": "./themes/Dark-color-theme.json"
-            }
-        ]
+        }]
     }
 }
